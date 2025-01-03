@@ -111,10 +111,12 @@ int main() {
         }
 
         bool draw = true;
-        for (int i = 0; i < cols; i++) {
-            if (filled[i] >= 0) {
-                draw = false;
-                break;
+        for (int i = 0; i < rows; i++){
+            for (int j = 0; j < cols; j++){
+                if (space[i][j] == 0){
+                    draw = false;
+                    break;
+                }
             }
         }
         if (draw) {
